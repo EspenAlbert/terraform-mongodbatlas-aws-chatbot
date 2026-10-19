@@ -1,5 +1,7 @@
 ## (Unreleased)
 
+## 0.1.0 (October 19, 2026)
+
 NOTES:
 
 * module: Adds the vendored hybrid-search chatbot app at chatbot/ with unit and integration test tiers ([#2](https://github.com/terraform-mongodbatlas-modules/terraform-mongodbatlas-aws-chatbot/pull/2))
