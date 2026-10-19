@@ -56,13 +56,13 @@ You need [Terraform](https://developer.hashicorp.com/terraform/install) 1.10 or 
 
 ### Automatic (recommended)
 
-Download `doctor.sh` and run it to report the tools, or pass `--install` to install any that are missing:
+Download `doctor.sh` and run it to report the tools. Add `--install` to run the install command for each missing tool where the script has one: the macOS commands use [Homebrew](https://brew.sh), and on Linux it installs Python and prints install links for Terraform and the AWS CLI.
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/terraform-mongodbatlas-modules/terraform-mongodbatlas-aws-chatbot/main/doctor.sh -o doctor.sh
 chmod +x doctor.sh
 ./doctor.sh            # report the tools
-./doctor.sh --install  # install any that are missing
+./doctor.sh --install  # install the missing tools it can
 ```
 
 ### Manual
