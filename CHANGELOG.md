@@ -1,5 +1,7 @@
 ## (Unreleased)
 
+## 0.0.1 (October 20, 2026)
+
 ## 0.1.0 (October 19, 2026)
 
 NOTES:
