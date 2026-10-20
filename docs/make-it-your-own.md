@@ -1,6 +1,6 @@
 # Make it your own
 
-This guide is experimental. It covers inputs and workflows that the examples do not exercise yet, so the shape may change. The [minimal example](../examples/minimal) and the input reference in the [README](../README.md) are the tested path.
+This guide is experimental. It covers inputs and workflows that the examples do not exercise yet, so the shape may change. The [minimal example](https://github.com/EspenAlbert/terraform-mongodbatlas-aws-chatbot/blob/v0.0.1/examples/minimal) and the input reference in the [README](https://github.com/EspenAlbert/terraform-mongodbatlas-aws-chatbot/blob/v0.0.1/README.md) are the tested path.
 
 ## Content
 
