@@ -20,9 +20,11 @@ If you are familiar with Terraform and already have Atlas API credentials and AW
 
 To deploy the hybrid search chatbot on AWS with Terraform, you need [Terraform](https://developer.hashicorp.com/terraform/install) 1.10 or later, [Python](https://www.python.org/downloads/) 3.10 or later, and the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) v2 on `PATH`. Choose one of the following workflows, then configure your credentials.
 
-### Automatic (recommended)
+### Install tools
 
-Download `doctor.sh` and run it to report the tools. Add `--install` to run the install command for each missing tool where the script has one: the macOS commands use [Homebrew](https://brew.sh), and on Linux it installs Python and prints install links for Terraform and the AWS CLI.
+#### Automatic workflow (recommended)
+
+Download `doctor.sh` and run it. This reports the tools that you need in order to deploy the hybrid search chatbot. Run `doctor.sh` with `--install` to run the install commands for each missing tool where the script has one. On macOS, the command runs [Homebrew](https://brew.sh) commands. On Linux, it installs Python and prints install links for Terraform and the AWS CLI.
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/terraform-mongodbatlas-modules/terraform-mongodbatlas-aws-chatbot/main/doctor.sh -o doctor.sh
@@ -31,16 +33,16 @@ chmod +x doctor.sh
 ./doctor.sh --install  # install the missing tools it can
 ```
 
-### Manual
+#### Manual
 
 Install the tools yourself:
 
-- [Terraform](https://developer.hashicorp.com/terraform/install) 1.10 or later, to run the `terraform` [commands](#commands).
-- [Python](https://www.python.org/downloads/) 3.10 or later and the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) v2 on `PATH`. The apply runs helper scripts through Terraform `local-exec` provisioners to render the assets tree and to start and poll the CodeBuild image build, which calls the AWS CLI.
+- [Install Terraform](https://developer.hashicorp.com/terraform/install) 1.10 or later, to run the `terraform` [commands](#commands).
+- [Install Python](https://www.python.org/downloads/) 3.10 or later and the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) v2 on `PATH`. The apply runs helper scripts through Terraform `local-exec` provisioners to render the assets tree and to start and poll the CodeBuild image build, which calls the AWS CLI.
 
-### Credentials
+### Configure credentials
 
-The following apply to either workflow:
+After you install the required tools, configure credentials as follows:
 
 - [Sign in](https://account.mongodb.com/account/login) to or [create](https://account.mongodb.com/account/register) your MongoDB Atlas Account.
 - Configure your [authentication](https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs#authentication) method. The module creates the Atlas project, so the credential needs access to your Atlas organization.
